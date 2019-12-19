@@ -1,13 +1,14 @@
 package com.example.clinique.Models;
 
 public class Patient {
-    private String name, id, dop, phone, address, history;
+    private String uid, name, id, dop, phone, address, history;
 
     public Patient(){
 
     }
 
-    public Patient(String name, String id, String dop, String phone, String address, String history) {
+    public Patient(String uid, String name, String id, String dop, String phone, String address, String history) {
+        this.uid = uid;
         this.name = name;
         this.id = id;
         this.dop = dop;
@@ -46,6 +47,14 @@ public class Patient {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getAddress() {

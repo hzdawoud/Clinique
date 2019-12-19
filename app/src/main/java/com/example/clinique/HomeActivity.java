@@ -241,12 +241,13 @@ public class HomeActivity extends AppCompatActivity {
                                             } else {
                                                 //user not found at all so we wanna add it twice in bot of "all users" and "patients" tables
                                                 HashMap<String, Object> map = new HashMap<>();
+                                                map.put("uid", hashed);
                                                 map.put("name", sName);
                                                 map.put("id", sId);
                                                 map.put("dop", sDob);
                                                 map.put("phone", sPhone);
                                                 map.put("address", sAddress);
-                                                map.put("history", "");
+                                                map.put("history", "worked");
 
                                                 usersRef.child(hashed).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                                                     @Override

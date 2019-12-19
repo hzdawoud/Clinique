@@ -1,5 +1,6 @@
 package com.example.clinique.Adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clinique.Models.Patient;
+import com.example.clinique.PatientActivity;
 import com.example.clinique.R;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -50,7 +52,9 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.MyViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(v.getContext(), PatientActivity.class);
+                intent.putExtra("uid", mPatient.get(position).getUid());
+                v.getContext().startActivity(intent);
             }
         });
     }
