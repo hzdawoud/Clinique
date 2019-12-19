@@ -11,14 +11,22 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:textSize="40dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp"
-            android:textColor="#203FA3"/>
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:background="#203FA3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textSize="40dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

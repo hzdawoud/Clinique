@@ -11,12 +11,14 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -46,6 +48,8 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
+import static android.graphics.Color.parseColor;
+
 public class HomeActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
@@ -72,6 +76,12 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        Window window = getWindow();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.setStatusBarColor(parseColor("#203FA3"));
+        }
+
 
         loadingBar = (ProgressBar)findViewById(R.id.loading_bar);
         recyclerView = (RecyclerView) findViewById(R.id.recycle_view);

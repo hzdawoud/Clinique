@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clinique.Models.Patient;
 import com.example.clinique.R;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -40,11 +41,18 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.MyViewHo
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
         Patient patient = mPatient.get(position);
         holder.name.setText(patient.getName());
         holder.id.setText(patient.getId());
         holder.dop.setText(patient.getDop());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override
