@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1071818393302",
+    "firebase_url": "https://clinique-fc084.firebaseio.com",
+    "project_id": "clinique-fc084",
+    "storage_bucket": "clinique-fc084.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071818393302:android:cc9cd3f69f4e3d7dd3eb77",
+        "android_client_info": {
+          "package_name": "com.example.clinique"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1071818393302-hqkvhg8enctsjtg4vktrintgr0o1puam.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.clinique",
+            "certificate_hash": "29fe21ac3e95641db77bf7800968e341de8bacbb"
+          }
+        },
+        {
+          "client_id": "1071818393302-7plesojf7btp64fmt2om4sdgtvmkof98.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEQAPs5B19hoD1K14BSnNtL3v13IXgUKY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1071818393302-7plesojf7btp64fmt2om4sdgtvmkof98.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

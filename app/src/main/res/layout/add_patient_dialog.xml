@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/white_rounded_background">
+
+
+        <EditText
+            android:layout_margin="10dp"
+            android:id="@+id/inName"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:hint="Patient Name"
+            android:textAlignment="center"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="10dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:layout_margin="10dp"
+            android:id="@+id/inId"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:hint="Patient ID"
+            android:textAlignment="center"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="10dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:inputType="number"/>
+
+        <EditText
+            android:layout_margin="10dp"
+            android:id="@+id/inPhone"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:hint="Patient phone"
+            android:textAlignment="center"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="10dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:inputType="number"/>
+
+        <EditText
+            android:layout_margin="10dp"
+            android:id="@+id/inAddress"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:hint="Patient address"
+            android:textAlignment="center"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="10dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:inputType="textPostalAddress"/>
+
+        <TextView
+            android:layout_margin="10dp"
+            android:textSize="17sp"
+            android:id="@+id/inDob"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:hint="Patient DOF"
+            android:textAlignment="center"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="10dp"
+            android:maxLines="1"
+            android:singleLine="true"/>
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="cancel"
+                android:textColor="#203FA3"
+                android:background="@drawable/transparent_background_with_border"
+                android:layout_marginRight="5dp"/>
+
+            <Button
+                android:id="@+id/addd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Add"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/blue_filled_background"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:indeterminateTint="@color/colorPrimary"
+            />
+
+</LinearLayout>
