@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="https://github.com/hzdawoud/Clinique">
-    <img src="https://github.com/hzdawoud/Clinique/blob/master/Images/Promo.jpg" width=1550 height=550>
+    <img src="https://github.com/hzdawoud/Clinique/blob/master/Images/image0.jpg" width=1550 height=550>
   </a>
 </p>
 
@@ -47,7 +47,9 @@ We developed this app using many development tools such as Android Studio, Gimp,
 - We used Visual Studio to create the accompanying application that verifies signing up clincs.
 - We used Adobe XD to create the app design.
 
+Desktop Accompanying Application which approves signed up clinics quickly and easily in a centralized environment to ensure data safety.
 ![Desktop App Screenshot](https://github.com/hzdawoud/Clinique/blob/master/Images/Desktop%20App%20Screenshot.png)
+
 ## To Do List
 
 - [x] Changing the app design
