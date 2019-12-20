@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="https://github.com/hzdawoud/Clinique">
-    <img src="https://github.com/hzdawoud/Clinique/blob/master/Images/Promo.jpg" width=1550 height=600>
+    <img src="https://github.com/hzdawoud/Clinique/blob/master/Images/Promo.jpg" width=1550 height=550>
   </a>
 </p>
 
