@@ -3,12 +3,14 @@ package com.example.clinique;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +27,10 @@ import static android.graphics.Color.parseColor;
 
 public class PatientActivity extends AppCompatActivity {
     private TextView name, dob, idNumber;
-    private Button history, sessions;
+    private Button history, sessions, update;
+
+    private ImageView archive;
+
     private EditText text;
     private boolean isHistoryClicked = false;
     private boolean isSessionsClicked = true;
@@ -45,6 +50,9 @@ public class PatientActivity extends AppCompatActivity {
 
         history = (Button)findViewById(R.id.history);
         sessions = (Button)findViewById(R.id.sessions);
+        update = (Button)findViewById(R.id.update);
+
+        archive = (ImageView)findViewById(R.id.archive);
 
         Window window = getWindow();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -63,6 +71,8 @@ public class PatientActivity extends AppCompatActivity {
 
     private void dataDisplay(String uid){
 
+        final String USER_UID = uid;
+
         Query query = FirebaseDatabase.getInstance().getReference("Accounts").
                 child(FirebaseAuth.getInstance().getCurrentUser().getUid().toString()).
                 child("Patients").orderByKey().equalTo(uid);
@@ -70,13 +80,13 @@ public class PatientActivity extends AppCompatActivity {
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        patient = snapshot.getValue(Patient.class);
-                        name.setText(patient.getName());
-                        dob.setText(patient.getDop());
-                        idNumber.setText(patient.getId());
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    patient = snapshot.getValue(Patient.class);
+                    name.setText(patient.getName());
+                    dob.setText(patient.getDop());
+                    idNumber.setText(patient.getId());
 
-                    }
+                }
                 /*    patientAdapter.notifyDataSetChanged();
                     loadingBar.setVisibility(View.GONE);*/
 
@@ -93,7 +103,7 @@ public class PatientActivity extends AppCompatActivity {
                 isHistoryClicked = true;
                 isSessionsClicked = false;
                 if (isHistoryClicked) {
-                   // toggle the boolean flag
+                    // toggle the boolean flag
                     setClickedColor(history);
                     setUnclickedColor(sessions);
                 }
@@ -121,6 +131,31 @@ public class PatientActivity extends AppCompatActivity {
         });
 
 
+
+        archive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                update.setVisibility(View.VISIBLE);
+                text.setEnabled(true);
+            }
+        });
+
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                FirebaseDatabase.getInstance().getReference().child("Users").child(USER_UID).child("history").
+                        setValue(text.getText().toString());
+
+                FirebaseDatabase.getInstance().getReference("Accounts").child(FirebaseAuth.getInstance().getCurrentUser().getUid().toString())
+                        .child("Patients").child(USER_UID).removeValue();
+
+                startActivity(new Intent(PatientActivity.this, HomeActivity.class));
+                finish();
+
+                Toast.makeText(PatientActivity.this, "Patient has been archived", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     private void setClickedColor(Button button){

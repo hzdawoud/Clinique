@@ -19,6 +19,7 @@
             android:layout_margin="10dp">
 
             <ImageView
+                android:id="@+id/archive"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/person"
@@ -99,14 +100,18 @@
                 android:background="#FFFFFF"
                 android:inputType="textMultiLine"
                 android:hint="typing here"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:enabled="false"
+                android:textColor="@color/blackColor"/>
 
             <Button
+                android:id="@+id/update"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#FFFFFF"
                 android:background="@drawable/unclicked_profile_button"
-                android:text="Update"/>
+                android:text="Update"
+                android:visibility="gone"/>
 
         </LinearLayout>
     </LinearLayout>
