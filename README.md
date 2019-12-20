@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/hzdawoud/Clinique">
-    <img src="https://github.com/hzdawoud/Clinique/blob/master/Images/mainIcon.png" width=180 height=180>
+    <img src="https://github.com/hzdawoud/Clinique/blob/master/Images/icon.png" width=180 height=180>
   </a>
   <h3 align="center">Clinique</h3>
 </p>
