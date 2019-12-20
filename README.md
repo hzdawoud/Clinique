@@ -47,6 +47,7 @@ We developed this app using many development tools such as Android Studio, Gimp,
 - We used Visual Studio to create the accompanying application that verifies signing up clincs.
 - We used Adobe XD to create the app design.
 
+![Desktop App Screenshot](https://github.com/hzdawoud/Clinique/blob/master/Images/Desktop%20App%20Screenshot.png)
 ## To Do List
 
 - [x] Changing the app design
