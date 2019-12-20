@@ -57,7 +57,7 @@ We developed this app using many development tools such as Android Studio, Gimp,
 - [ ] Adding full tablet support
 
 ## Screenshots
-![Screenshot](https://github.com/hzdawoud/Clinique/blob/master/Images/79715037_500045450618310_2075331822379597824_n.png)
+![Screenshot](https://github.com/hzdawoud/Clinique/blob/master/Images/Screenshots.png)
 
 ### Promo Video (Click the image to view the video)
 [![Watch the video](https://github.com/hzdawoud/Clinique/blob/master/Images/giphy.gif)](https://www.youtube.com/watch?v=fSXeXd5x5W0)
